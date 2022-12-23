@@ -2,7 +2,7 @@ package springHW1;
 
 public class Bus extends PublicTransport {
 	
-		int passenger=0,max_passenger=30,fee=1000;
+		int passenger=0,max_passenger=30,fare=1000;
 		String status="운행";
 		
 		{
@@ -12,7 +12,7 @@ public class Bus extends PublicTransport {
 		public void getStatus(){
 			System.out.println("탑승 승객 수 = "+ this.passenger);
 			System.out.println("잔여 승객 수 = "+(this.max_passenger-this.passenger));
-			System.out.println("요금 확인 = "+this.fee*this.passenger);
+			System.out.println("요금 확인 = "+this.fare*this.passenger);
 		} 
 		
 		public void setStatus(String status) {
@@ -44,7 +44,7 @@ public class Bus extends PublicTransport {
 		public void subtractOiling(int oiling) {
 			this.oiling-=oiling;
 			System.out.println("주유량: "+this.oiling);
-			if(oiling<10) {
+			if(this.oiling<10) {
 				System.out.println("주유 필요");
 				status="차고지행";
 			}
