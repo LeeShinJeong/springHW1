@@ -1,8 +1,16 @@
 package springHW1;
 
 public class PublicTransport {
-
-		int num,spchange,max_passenger;
+	
+		static int count = 0;
+		int num;
+		{
+			++count;
+			num=count;
+		}
+		public PublicTransport() {}
+		
+		int spchange,max_passenger;
 		int oiling = 100;
 		int speed = 0;
 
